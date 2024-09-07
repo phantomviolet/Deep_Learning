@@ -1,7 +1,7 @@
 import numpy as np
 
 x = np.array([[1, 2], [3, 4]])
-y = np.array([[3, 0], [0, 6]])
+y = np.array([10, 20])
 
-print(x + y)
+#broadcast:形が違う行列でも計算ができる機能
 print(x * y)
