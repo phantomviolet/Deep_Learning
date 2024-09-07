@@ -1,5 +1,10 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
-x = np.array([1.0, 2.0, 3.0])
-print(x)
-print(type(x))
+#データ準備
+x = np.arange(0, 6, 0.1)#ゼロから6まで0.1間隔で作成
+y = np.sin(x)
+
+#グラフ描画
+plt.plot(x, y)
+plt.show()
