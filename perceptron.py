@@ -31,7 +31,7 @@ def or_gate(x1, x2):
     else:
         return 1
 
-#ª·ª«ª·xor«²?«ÈªÏperceptronªòŞÅªÃªÆÎıúŞª¹ªëªÎªÏÜôÊ¦ÒöªÀ¡£
+#ª·ª«ª·xor«²?«ÈªÏperceptronªòŞÅªÃªÆÎıúŞª¹ªëªÎªÏÜôÊ¦ÒöªÀ¡£1
 def xor_gate(x1, x2): 
     x = np.array(x1, x2)
     w = np.array([0.7 ,-0.4])
