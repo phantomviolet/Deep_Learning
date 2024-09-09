@@ -1,6 +1,6 @@
 import numpy as np
 
-#and/nand/xorゲートはデータの数値を変えて具現出来る
+#and/nand/orゲートはデータの数値を変えて具現出来る
 def and_gate(x1, x2):
     x = np.array(x1, x2)
     w = np.array([0.5 ,0.5])
