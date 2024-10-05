@@ -34,5 +34,8 @@ def set_neurons(Layer_Count):
 Layer_Count = random.randrange(2, 17)
 Neurons = [0] * Layer_Count
 Neurons = set_neurons(Layer_Count)
-print(Neurons[0].Node_Count)
+first_Layer_Node_Count = Neurons[0].Node_Count
+input = np.zeros((first_Layer_Node_Count, 1))
+for i in range(first_Layer_Node_Count):
+    input[i, 0] = random.randrange(1, 5)
 
