@@ -1,6 +1,7 @@
 import numpy as np
 import random
 
+#class
 class Layer:
     def __init__(self, Layer_size, Node_size):
         self.Layer_size = Layer_size
@@ -46,7 +47,7 @@ def set_neurons(Layer_size):
         New_Neurons[i].set_Node(Next_Node_Count)
     return New_Neurons
 
-# set input value 1 ~ 4
+# set input value 1 ~ 5
 def set_input(first_Layer_Node_Count):
     input = np.zeros((first_Layer_Node_Count, 1))
     for i in range(first_Layer_Node_Count):
