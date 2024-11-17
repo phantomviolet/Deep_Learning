@@ -40,6 +40,8 @@ def forward():
         forward_result["Z" + str(i + 1)] = activation(forward_result["A" + str(i + 1)])
     return forward_result
 
+# 역전파 함수
+
 # 레이어 사이즈, 노드 사이즈, 학습률, 가중치, 노드 사이즈 딕셔너리
 Layer_size = 3
 minimum_node_size = 2
@@ -62,5 +64,4 @@ node_weight = set_weight()
 print("node weight: ", node_weight, "\n")
 forward_result = forward()
 print("forward: ", forward_result, "\n")
-
 
