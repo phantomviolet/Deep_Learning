@@ -1,4 +1,6 @@
 import numpy as np
+from PIL import Image
+import matplotlib.pyplot as plt
 
 # 신경망 클래스
 class Network:
@@ -92,6 +94,24 @@ class Learning:
             else:
                 self.network.node_weight["W" + str(i + 1)] += self.learning_rate * np.dot(self.forward_result["Z" + str(i)].T, self.deltas["Delta" + str(i + 1)])
         return self.network.node_weight
+    
+# png 파일 불러오기
+def load_image(image_path):
+    image = Image.open(image_path)
+    image = image.convert("L")
+    image = np.array(image)
+    return image
+
+image_array = {}
+
+for i in range(1, 6):
+    image_path = f"C:/Deep_Learning.worktrees/main/image_{i}.png"
+    image_array[f"image_{i}"] = load_image(image_path)
+    
+    # 불러온 이미지 시각적으로 확인
+    plt.imshow(image_array[f"image_{i}"], cmap='gray')
+    plt.title(f"Image {i}")
+    plt.show()
             
 
 network = Network(input_size=3, 
@@ -135,5 +155,3 @@ while True:
     # 2. 가중치 초기값 랜덤 말고 다른 값으로
     # 3. 활성화 함수 변경
     # 학습 데이터는 20개 사용 테스트는 5개로
-    # 1
-    
